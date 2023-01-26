@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  line-height: 1;
+  font-family: "Proxima Nova Rg", sans-serif;
+}
+
+:root {
+  --glabal-side-padding: 2rem;
+  --grey-border: #D8DEE8;
+  --tags-bg: #ECEFF1;
+  --title-color: #424242;
+}
+
+body {
+  background-color: #fbfbfd;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+header {
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(1rem) saturate(160%);
+  padding: 1rem var(--glabal-side-padding);
+  background-color: rgba(255, 255, 255, 0.8);
+  justify-content: space-between;
+  color: var(--title-color);
+  flex-flow: row wrap;
+  position: sticky;
+  display: flex;
+  gap: 1rem;
+  z-index: 1;
+  top: 0;
+}
+header h1 {
+  font-family: "Proxima Nova Bl", sans-serif;
+  text-transform: capitalize;
+  min-width: min-content;
+  max-width: max-content;
+  flex-grow: 1;
+}
+header h2 {
+  font-family: "Proxima Nova Rg", sans-serif;
+  text-transform: capitalize;
+  min-width: max-content;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+header h2 hr {
+  background-color: blue;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  border: none;
+  width: 0.5rem;
+}
+header button {
+  background-color: cornflowerblue;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  color: #fff;
+}
+header button:hover {
+  background-color: dodgerblue;
+  cursor: pointer;
+}
+
+main {
+  grid-template-areas: "aside main main";
+  grid-template-columns: 1fr 2fr;
+  display: grid;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  main {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+main aside {
+  flex-flow: column nowrap;
+  grid-area: aside;
+  display: flex;
+  padding: 2rem;
+  gap: 1rem;
+}
+@media screen and (max-width: 768px) {
+  main aside {
+    order: 2;
+  }
+}
+main aside section {
+  border: 1px solid var(--grey-border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+main aside section h3 {
+  font-family: "Proxima Nova Bl", sans-serif;
+  text-transform: uppercase;
+  color: var(--title-color);
+  padding-bottom: 0.5rem;
+}
+main aside section article {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem 0.8rem;
+}
+main aside section article span {
+  font-family: "Proxima Nova Cn Rg", sans-serif;
+  background-color: var(--tags-bg);
+  transition: all 0.2s ease;
+  align-items: baseline;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: flex;
+  gap: 0.3rem;
+}
+main aside section article span:hover {
+  background-color: #CFD8DC;
+}
+main aside section article span i {
+  transition: all 0.2s ease;
+  font-style: unset;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+main aside section article span:hover i {
+  opacity: 1;
+}
+main aside section article .skills-row {
+  display: inherit;
+  flex-flow: row wrap;
+  gap: 0.5rem 0.8rem;
+}
+main aside .skills_tools {
+  display: flex;
+  flex-flow: column nowrap;
+}
+main aside .skills_tools article {
+  flex-flow: column nowrap;
+}
+main aside .skills_tools article h5 {
+  padding-top: 1rem;
+}
+main aside .skills_tools #desc {
+  padding-top: 2rem;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+main #main {
+  box-shadow: 0 -1rem 0.5rem rgba(0, 0, 0, 0.2);
+  padding: var(--glabal-side-padding);
+  flex-flow: column nowrap;
+  grid-area: main;
+  display: flex;
+  gap: 2rem;
+}
+@media screen and (max-width: 768px) {
+  main #main {
+    order: 1;
+  }
+}
+main #main article h3 {
+  font-family: "Proxima Nova Bl", sans-serif;
+  text-transform: uppercase;
+  color: var(--title-color);
+  padding-bottom: 1rem;
+}
+main #main .about img {
+  float: left;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1;
+  display: flex;
+  width: 30%;
+  margin: 0 2rem 1rem 0;
+}
+main #main .about p {
+  line-height: normal;
+}
+main #main .experience,
+main #main .education {
+  border: 1px solid var(--grey-border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+main #main .experience section {
+  flex-flow: column nowrap;
+  display: flex;
+  gap: 1.8rem;
+  color: var(--title-color);
+}
+main #main .experience section div {
+  display: inherit;
+  flex-flow: column nowrap;
+}
+main #main .experience section div h4 {
+  display: flex;
+  line-height: normal;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 0.3rem;
+  font-size: 1.2rem;
+}
+main #main .experience section div h4 span {
+  background-color: var(--tags-bg);
+  white-space: nowrap;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+}
+main #main .experience section div h5 {
+  padding-bottom: 0.4rem;
+  font-size: 1rem;
+}
+main #main .experience section div p {
+  line-height: 1.2;
+}
+main #main .education {
+  flex-flow: column nowrap;
+  display: flex;
+  color: var(--title-color);
+}
+main #main .education .edu_basic,
+main #main .education .edu_additional {
+  padding-bottom: 1rem;
+}
+main #main .education .edu_basic h4,
+main #main .education .edu_additional h4 {
+  padding-bottom: 0.3rem;
+  line-height: normal;
+  align-items: center;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  display: flex;
+  gap: 1rem;
+}
+main #main .education .edu_basic h4 span,
+main #main .education .edu_additional h4 span {
+  background-color: var(--tags-bg);
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+main #main .education .edu_basic h5,
+main #main .education .edu_additional h5 {
+  padding-bottom: 0.4rem;
+  font-size: 1rem;
+}
+main #main .education .edu_basic h5 u,
+main #main .education .edu_additional h5 u {
+  font-style: italic;
+}
+
+.contacts {
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1rem);
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  gap: 1rem;
+  opacity: 0;
+  display: none;
+}
+.contacts #modal {
+  position: relative;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.contacts i {
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+}
+
+.visible {
+  z-index: 2;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=main.css.map */
