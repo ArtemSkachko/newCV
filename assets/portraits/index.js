@@ -1,7 +1,7 @@
 export const heroImages = [
-    require('./face.jpg'),
-    require('./face2.jpg'),
-    require('./face3.jpg'),
-    require('./face4.jpg'),
-    require('./face5.jpg')
+    require('./face-0.jpg'),
+    require('./face-1.jpg'),
+    require('./face-2.jpg'),
+    require('./face-3.jpg'),
+    require('./face-4.jpg')
 ]

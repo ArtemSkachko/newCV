@@ -21,7 +21,7 @@ const person = {
         ]
     },
     contacts: {
-        phones: ['+380991153048'],
+        phone: ['+380991153048'],
         email: 'as.skachko@gmail.com',
         messengers: [
             {
@@ -398,7 +398,7 @@ const person = {
             Working with government agencies on the assessment of the value and sale of property that is in tax lien, as well as in judicial rehabilitation and liquidation procedures`,
         },
     ],
-    competitions: ['designer', 'front-end developer', 'project/product manager'],
+    competitions: ['designer', 'front-end developer', 'project manager'],
     about: [
         `So, a little about me. <br>`,
         `First of all, I am a cheerful person who loves to learn something new every day.`,
@@ -429,6 +429,7 @@ const person = {
         document.body.insertAdjacentHTML('beforeend', Header);
     },
     drawBody: function () {
+        const randomizer = Math.floor(Math.random()*6);
         const experience = this.experience.sort((a,b) => b.endDate < a.endDate ? -1: 1).map(item => `<div>
                             <h4>${item.companyName} <span>${item.startDate} - ${item.endDate < new Date().getFullYear() ? item.endDate : 'now'}</span></h4>
                             <h5><u>Position:</u> ${item.position}</h5>
@@ -486,7 +487,7 @@ const person = {
             </aside>
             <section id="main">
                 <article class="about">
-                    <img src="./assets/portraits/face.jpg" alt="face">
+                    <img src="assets/portraits/face-${randomizer}.jpg" alt="face">
                     
                         <h3>Shortly about me</h3>
                         <p>
@@ -516,17 +517,25 @@ const person = {
     drawContacts: function (){
         const socials = this.contacts.messengers.map(item => `
                     <a href=${item.href} data-value=${item.nickname}>
-                        <i class=${item.iconClass}></i>
+                        <i class='${item.iconClass}'></i>
                         ${item.name}
                     </a>`);
 
         document.body.insertAdjacentHTML('beforeend', `
             <section class="contacts">
-                    <i class="fa-regular fa-circle-xmark"></i>
+                    
                     <div id="modal">
-                        <a href="mailto:${this.contacts.email}">${this.contacts.email}</a>
+                        <a href="tel:${this.contacts.phone}">
+                            <i class="fa-solid fa-mobile"></i>
+                            ${this.contacts.phone}
+                        </a>
+                        <a href="mailto:${this.contacts.email}">
+                            <i class="fa-regular fa-envelope"></i> ${this.contacts.email}
+                        </a>
+                        
                         ${socials.join('')}
                     </div>
+                    <i class="fa-regular fa-circle-xmark"></i>
             </section>
         `)
     },
@@ -571,3 +580,4 @@ const person = {
 }
 
 person.Render()
+

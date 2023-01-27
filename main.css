@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
   line-height: 1;
   font-family: "Proxima Nova Rg", sans-serif;
 }
@@ -17,8 +16,8 @@
 body {
   background-color: #fbfbfd;
   transition: all 0.2s ease;
-  display: flex;
   flex-flow: column nowrap;
+  display: flex;
 }
 
 header {
@@ -107,9 +106,9 @@ main aside section h3 {
   padding-bottom: 0.5rem;
 }
 main aside section article {
-  display: flex;
   flex-flow: row wrap;
   gap: 0.5rem 0.8rem;
+  display: flex;
 }
 main aside section article span {
   font-family: "Proxima Nova Cn Rg", sans-serif;
@@ -135,13 +134,13 @@ main aside section article span:hover i {
   opacity: 1;
 }
 main aside section article .skills-row {
-  display: inherit;
   flex-flow: row wrap;
+  display: inherit;
   gap: 0.5rem 0.8rem;
 }
 main aside .skills_tools {
-  display: flex;
   flex-flow: column nowrap;
+  display: flex;
 }
 main aside .skills_tools article {
   flex-flow: column nowrap;
@@ -174,16 +173,27 @@ main #main article h3 {
   padding-bottom: 1rem;
 }
 main #main .about img {
-  float: left;
+  margin: 0 2rem 1rem 0;
   border-radius: 50%;
   object-fit: cover;
   aspect-ratio: 1;
   display: flex;
+  float: left;
   width: 30%;
-  margin: 0 2rem 1rem 0;
 }
 main #main .about p {
   line-height: normal;
+}
+@media screen and (max-width: 768px) {
+  main #main .about {
+    flex-flow: column nowrap;
+    display: flex;
+  }
+  main #main .about img {
+    margin-bottom: 2rem;
+    align-self: center;
+    width: 62%;
+  }
 }
 main #main .experience,
 main #main .education {
@@ -192,14 +202,14 @@ main #main .education {
   padding: 1rem;
 }
 main #main .experience section {
+  color: var(--title-color);
   flex-flow: column nowrap;
   display: flex;
   gap: 1.8rem;
-  color: var(--title-color);
 }
 main #main .experience section div {
-  display: inherit;
   flex-flow: column nowrap;
+  display: inherit;
 }
 main #main .experience section div h4 {
   display: flex;
@@ -224,9 +234,9 @@ main #main .experience section div p {
   line-height: 1.2;
 }
 main #main .education {
+  color: var(--title-color);
   flex-flow: column nowrap;
   display: flex;
-  color: var(--title-color);
 }
 main #main .education .edu_basic,
 main #main .education .edu_additional {
@@ -261,29 +271,48 @@ main #main .education .edu_additional h5 u {
 }
 
 .contacts {
-  transition: all 0.3s ease;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(1rem);
+  transition: all 0.3s ease;
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 0;
+  display: none;
   height: 100%;
   width: 100vw;
-  gap: 1rem;
   opacity: 0;
-  display: none;
+  gap: 1rem;
+  top: 0;
 }
 .contacts #modal {
-  position: relative;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
+  flex-flow: column nowrap;
   background-color: white;
-  padding: 2rem;
   border-radius: 1rem;
+  position: relative;
+  padding: 2rem 1.5rem;
+  display: flex;
+  gap: 1rem;
 }
-.contacts i {
+.contacts #modal a {
+  color: #fff;
+  background-color: dodgerblue;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+.contacts #modal a i {
+  font-size: 1.5rem;
+}
+.contacts > i {
   cursor: pointer;
   font-size: 2rem;
-  color: white;
+  color: #fff;
+  position: relative;
+  top: -12rem;
 }
 
 .visible {
