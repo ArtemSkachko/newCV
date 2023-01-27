@@ -38,6 +38,7 @@ header {
   header {
     flex-flow: column nowrap;
     align-items: center;
+    padding: 1rem;
   }
 }
 header h1 {
@@ -102,6 +103,7 @@ main aside {
 @media screen and (max-width: 768px) {
   main aside {
     order: 2;
+    padding: 1rem;
   }
 }
 main aside section {
@@ -174,6 +176,7 @@ main #main {
 @media screen and (max-width: 768px) {
   main #main {
     order: 1;
+    padding: 2rem 1rem;
   }
 }
 main #main article h3 {
