@@ -34,6 +34,12 @@ header {
   z-index: 1;
   top: 0;
 }
+@media screen and (max-width: 768px) {
+  header {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+}
 header h1 {
   font-family: "Proxima Nova Bl", sans-serif;
   text-transform: capitalize;
@@ -51,6 +57,11 @@ header h2 {
   display: flex;
   gap: 0.5rem;
 }
+@media screen and (max-width: 768px) {
+  header h2 {
+    font-size: 0.8rem;
+  }
+}
 header h2 hr {
   background-color: blue;
   border-radius: 50%;
@@ -59,14 +70,13 @@ header h2 hr {
   width: 0.5rem;
 }
 header button {
-  background-color: cornflowerblue;
+  background-color: dodgerblue;
   border-radius: 0.2rem;
   padding: 0.5rem 1rem;
   border: none;
   color: #fff;
 }
 header button:hover {
-  background-color: dodgerblue;
   cursor: pointer;
 }
 
@@ -190,7 +200,7 @@ main #main .about p {
     display: flex;
   }
   main #main .about img {
-    margin-bottom: 2rem;
+    margin: 0 0 2rem 0;
     align-self: center;
     width: 62%;
   }
@@ -274,6 +284,7 @@ main #main .education .edu_additional h5 u {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(1rem);
   transition: all 0.3s ease;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -281,7 +292,7 @@ main #main .education .edu_additional h5 u {
   height: 100%;
   width: 100vw;
   opacity: 0;
-  gap: 1rem;
+  gap: 2rem;
   top: 0;
 }
 .contacts #modal {
@@ -311,8 +322,6 @@ main #main .education .edu_additional h5 u {
   cursor: pointer;
   font-size: 2rem;
   color: #fff;
-  position: relative;
-  top: -12rem;
 }
 
 .visible {
