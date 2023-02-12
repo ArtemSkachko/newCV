@@ -113,11 +113,19 @@ const person = {
                     name: 'WPO',
                     experience: 2,
                 },
+                {
+                    name: 'Webflow',
+                    experience: 2,
+                },
             ]
         },
         {
             section: 'Back-end',
             items: [
+                {
+                    name: 'PHP (basics)',
+                    experience: 2,
+                },
                 {
                     name: 'Postman',
                     experience: 2,
@@ -179,6 +187,18 @@ const person = {
                     name: 'Responsive design',
                     experience: 5,
                 },
+                {
+                    name: 'WIX',
+                    experience: 2,
+                },
+                {
+                    name: 'Tilda',
+                    experience: 2,
+                },
+                {
+                    name: 'Prototyping',
+                    experience: 5,
+                },
             ]
         },
         {
@@ -199,6 +219,10 @@ const person = {
                 {
                     name: 'Risk management',
                     experience: 8,
+                },
+                {
+                    name: 'SDLC',
+                    experience: 5,
                 },
                 {
                     name: 'Project planing',
@@ -270,7 +294,22 @@ const person = {
                     name: 'Self-Study',
                     experience: 10,
                 },
-
+                {
+                    name: 'Creativity',
+                    experience: 10,
+                },
+                {
+                    name: 'Adaptability',
+                    experience: 10,
+                },
+                {
+                    name: 'Teamwork',
+                    experience: 10,
+                },
+                {
+                    name: 'Leadership',
+                    experience: 10,
+                },
             ]
         },
     ],
