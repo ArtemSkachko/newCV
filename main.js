@@ -47,7 +47,7 @@ const person = {
             {
                 name: 'linkedIn',
                 iconClass: 'fab fa-linkedin',
-                href: 'https://linkedin.com/in/art-kachko',
+                href: 'https://linkedin.com/in/art-skachko',
             },
             {
                 name: 'bechance',

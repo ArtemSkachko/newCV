@@ -42,6 +42,14 @@ header {
     padding: 1rem;
   }
 }
+@media print {
+  header {
+    padding: 2rem 1rem;
+    backdrop-filter: none;
+    background-color: white;
+    box-shadow: none;
+  }
+}
 header h1 {
   font-family: "Proxima Nova Bl", sans-serif;
   text-transform: capitalize;
@@ -131,6 +139,11 @@ main aside {
     padding: 1rem;
   }
 }
+@media print {
+  main aside {
+    padding: 2rem 1rem 0 1rem;
+  }
+}
 main aside section {
   border: 1px solid var(--grey-border);
   border-radius: 0.5rem;
@@ -202,6 +215,11 @@ main #main {
   main #main {
     order: 1;
     padding: 2rem 1rem;
+  }
+}
+@media print {
+  main #main {
+    padding: 2rem 1rem 0 1rem;
   }
 }
 main #main article h3 {
