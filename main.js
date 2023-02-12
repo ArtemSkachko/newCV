@@ -47,17 +47,17 @@ const person = {
             {
                 name: 'linkedIn',
                 iconClass: 'fab fa-linkedin',
-                href: 'https://www.linkedin.com/in/art-kachko',
+                href: 'https://linkedin.com/in/art-kachko',
             },
             {
                 name: 'bechance',
                 iconClass: 'fab fa-behance-square',
-                href: 'https://www.behance.net/as_skachko',
+                href: 'https://behance.net/as_skachko',
             },
             {
                 name: 'facebook',
                 iconClass: 'fab fa-facebook',
-                href: 'https://www.facebook.com/art.skachko',
+                href: 'https://facebook.com/art.skachko',
             }
         ],
     },
@@ -366,11 +366,13 @@ const person = {
             endDate: 2025,
             companyName: `'Remote Helpers'`,
             position: `Fullstack Designer => Frontend developer => Project manager`,
-            description: `Development of design projects of any complexity, including CNC projects, 
-            design of printed materials, advertising, branding, development of corporate identity, 
-            design development of both simple and complex web resources and applications.
-            Adaptive layout, displaying dynamic content, working with databases, Development based on popular CMS, 
-            creating themes, configuring servers, mentoring, training new employees, project management`,
+            description: `Development of strategies, planning, personnel management,
+             management of internal and external projects. Analysis of candidates,
+             conducting interviews, mentorship, accompanying employees on overseas projects,
+             resolving disputes and conflicts both within the company and on projects involving company employees. 
+             Consulting company clients on technical solutions and technologies, selecting necessary specialists,
+             forming project teams. Practical activities in the field of design,
+             front-end development, and development of comprehensive solutions.`,
         },
         {
             startDate: 2017,
@@ -398,22 +400,20 @@ const person = {
             Working with government agencies on the assessment of the value and sale of property that is in tax lien, as well as in judicial rehabilitation and liquidation procedures`,
         },
     ],
-    competitions: ['designer', 'front-end developer', 'project manager'],
+    competitions: ['designer', 'front-end engineer', 'project manager'],
     about: [
-        `So, a little about me. <br>`,
-        `First of all, I am a cheerful person who loves to learn something new every day.`,
-        `I have over 10 years of experience in design (including DIY, printing, web design and interface development),`,
-        `so I am ready to provide design services in almost any direction. For the last 4 years my interests have shifted more to the field of web development,`,
-        `so I can say that I am a professional master of html, css, JavaScript. But, everything is a little more complicated :)`,
-        `To these technical skills, it is also worth adding that I am at the same time a certified expert in the assessment of property and property rights,`,
-        `as well as a certified arbitration manager (liquidator, reorganization manager, property manager), respectively, having a higher financial education.`,
-        `At the moment I am the head of the development and design department of a large outstaffing company,`,
-        `the number of employees of which is about 300 people. In addition to managing the department,`,
-        `today I perform many other functions, such as mentoring, interviewing new candidates,`,
-        `project management, maintaining and administering the company\'s own server and much more.`
+        `I am a manager and engineer by profession. However, let me shed some light on the details.<br>`,
+        `Born into a family of engineers, I have always had a fascination with taking things apart and seeing how they work.`,
+        `With time and education, I gained the knowledge and wisdom to identify flaws in things and processes, and to improve and create something new.<br>`,
+        `After exploring and studying various fields, I have developed the ability to solve a vast number of problems and tasks, making me an engineer.`,
+        `Currently, I engage in activities such as researching, planning, designing, constructing, developing, documenting, producing, commissioning`,
+        `testing, repairing, disposing, and quality management. It doesn't matter to me what the field is, the scale of the project or how complex it is.<br>`,
+        `My current area of interest is IT, and I believe it will continue to be interesting as long as AI doesn't take over the world.<br>`,
+        `<b>Glory to Ukraine!</b>`
     ],
 
     drawHeader: function () {
+
         const name = `
             ${this.general.firstName ? this.general.firstName : 'John'} 
             ${this.general.lastName ? this.general.lastName : 'Doe'}`;
@@ -421,9 +421,13 @@ const person = {
 
         const Header = `
             <header>
-                    <h1>${name}</h1>
+                    <h1>${name} <img src="assets/img/flag-ukraine.png" alt="im ukranian"></h1>
                     <h2>${competitions.join('<hr>')}</h2>
-                    <button>Contacts</button>
+                    <div>
+                        <button id="contact-button">Contacts</button>
+                        <button id="print-button"><i class="fa-solid fa-print"></i></button>
+                    </div>
+                    
             </header>`;
 
         document.body.insertAdjacentHTML('beforeend', Header);
@@ -542,7 +546,7 @@ const person = {
     modalHandler: function (){
         const contactSection = document.querySelector('.contacts')
 
-        document.querySelector('header button').addEventListener('click', showModal);
+        document.querySelector('header #contact-button').addEventListener('click', showModal);
 
         function showModal() {
             const visibility = getComputedStyle(contactSection).display;
@@ -570,12 +574,48 @@ const person = {
 
 
     },
+    printActions: function (){
+        const contactGroup = `
+        <article class="print-contacts">
+            <section class="print-g-contacts">
+                <span><s>Phone</s>: ${this.contacts.phone}</span>
+                <span><s>Email</s>: ${this.contacts.email}</span>
+                <hr>
+            </section>
+            <section class="print-g-messengers">
+                ${this.contacts.messengers.map(item => `<span><s>${item.name}</s>: ${item.nickname}</span>`).join('')}
+            </section>
+            <section class="print-g-socials">
+                ${this.contacts.socials.map(item => `<span><s>${item.name}</s>: ${item.href.slice(8,)}</span>`).join('')}
+            </section>
+        </article>
+        `;
+
+
+        document.querySelector('header #print-button').addEventListener('click', letsPrint);
+        function letsPrint(){
+            window.onbeforeprint = (e) => {
+                document.querySelector('.print-contacts') === null
+                ?
+                document.querySelector('#main').insertAdjacentHTML('afterbegin', contactGroup)
+                :
+                '';
+            }
+            window.print();
+
+            window.onafterprint = (e) => {
+                document.querySelector('.print-contacts').remove()
+            }
+        }
+    },
+
 
     Render: function () {
         this.drawHeader();
         this.drawBody();
         this.drawContacts();
         this.modalHandler();
+        this.printActions();
     }
 }
 
