@@ -5,368 +5,267 @@ const person = {
         gender: 'male',
         age: `${new Date().getFullYear() - 1988}`,
         location: "Batumi, Georgia",
-        languages: [
+        languages: [{
+            name: 'Ukrainian', level: 'С2',
+        }, {
+            name: 'English', level: 'B2',
+        }, {
+            name: 'Russian', level: 'С2',
+        },]
+    },
+    contacts: {
+        phone: ['+380991153048'], email: 'as.skachko@gmail.com', messengers: [{
+            name: 'telegram',
+            nickname: '@Artem_Skachko',
+            href: 'https://t.me/Artem_Skachko',
+            iconClass: 'fab fa-telegram',
+        }, {
+            name: 'viber',
+            nickname: '+380991153048',
+            href: `viber://chat?number=%2B+380991153048`,
+            iconClass: 'fab fa-viber',
+        }, {
+            name: 'whatsapp',
+            nickname: '+380991153048',
+            href: `https://wa.me/+380991153048`,
+            iconClass: 'fab fa-whatsapp',
+        },], socials: [{
+            name: 'linkedIn', iconClass: 'fab fa-linkedin', href: 'https://linkedin.com/in/art-skachko',
+        }, {
+            name: 'bechance', iconClass: 'fab fa-behance-square', href: 'https://behance.net/as_skachko',
+        }, {
+            name: 'facebook', iconClass: 'fab fa-facebook', href: 'https://facebook.com/art.skachko',
+        }],
+    },
+    messengers: [{
+        href: 'https://t.me/Artem_Skachko', iconClass: 'fab fa-telegram',
+    }, {
+        href: `viber://chat?number=%2B+380991153048`, iconClass: 'fab fa-viber',
+    }, {
+        href: `https://wa.me/+380991153048`, iconClass: 'fab fa-whatsapp',
+    },],
+    competitions: ['designer', 'front-end engineer', 'project manager'], /**/
+    about: [`I am a manager and engineer by profession. However, let me shed some light on the details.<br>`, `Born into a family of engineers, I have always had a fascination with taking things apart and seeing how they work.`, `With time and education, I gained the knowledge and wisdom to identify flaws in things and processes, and to improve and create something new.<br>`, `After exploring and studying various fields, I have developed the ability to solve a vast number of problems and tasks, making me an engineer.`, `Currently, I engage in activities such as researching, planning, designing, constructing, developing, documenting, producing, commissioning`, `testing, repairing, disposing, and quality management. It doesn't matter to me what the field is, the scale of the project or how complex it is.<br>`, `My current area of interest is IT, and I believe it will continue to be interesting as long as AI doesn't take over the world.<br>`, `<b>Glory to Ukraine!</b>`],
+    skills: [
+        {
+        section: 'Front-end', items: [
             {
-                name: 'Ukrainian',
-                level: 'С2',
+                name: 'HTML', experience: 5,
             },
             {
-                name: 'English',
-                level: 'B2',
+                name: 'javaScript', experience: 2,
             },
             {
-                name: 'Russian',
-                level: 'С2',
+                name: 'CSS', experience: 5,
+            },
+            {
+                name: 'SASS/LESS', experience: 3,
+            },
+            {
+                name: 'Git', experience: 3,
+            },
+            {
+                name: 'AJAX', experience: 1,
+            },
+            {
+                name: 'React', experience: 1,
+            },
+            {
+                name: 'Redux/toolkit', experience: 1,
+            },
+            {
+                name: 'Wordpress', experience: 5,
+            },
+            {
+                name: 'Elementor', experience: 5,
+            },
+            {
+                name: 'JSON', experience: 5,
+            },
+            {
+                name: 'APIs', experience: 2,
+            },
+            {
+                name: 'WPO', experience: 2,
+            },
+            {
+                name: 'Webflow', experience: 2,
             },
         ]
     },
-    contacts: {
-        phone: ['+380991153048'],
-        email: 'as.skachko@gmail.com',
-        messengers: [
-            {
-                name: 'telegram',
-                nickname: '@Artem_Skachko',
-                href: 'https://t.me/Artem_Skachko',
-                iconClass: 'fab fa-telegram',
-            },
-            {
-                name: 'viber',
-                nickname: '+380991153048',
-                href: `viber://chat?number=%2B+380991153048`,
-                iconClass: 'fab fa-viber',
-            },
-            {
-                name: 'whatsapp',
-                nickname: '+380991153048',
-                href: `https://wa.me/+380991153048`,
-                iconClass: 'fab fa-whatsapp',
-            },
-        ],
-        socials: [
-            {
-                name: 'linkedIn',
-                iconClass: 'fab fa-linkedin',
-                href: 'https://linkedin.com/in/art-skachko',
-            },
-            {
-                name: 'bechance',
-                iconClass: 'fab fa-behance-square',
-                href: 'https://behance.net/as_skachko',
-            },
-            {
-                name: 'facebook',
-                iconClass: 'fab fa-facebook',
-                href: 'https://facebook.com/art.skachko',
-            }
-        ],
-    },
-    skills:[
         {
-            section: 'Front-end',
-            items: [
+            section: 'Back-end', items: [
                 {
-                    name: 'HTML',
-                    experience: 5,
+                    name: 'PHP (basics)', experience: 2,
                 },
                 {
-                    name: 'javaScript',
-                    experience: 2,
+                    name: 'Postman', experience: 2,
                 },
                 {
-                    name: 'CSS',
-                    experience: 5,
+                    name: 'mySQL', experience: 2,
                 },
                 {
-                    name: 'SASS/LESS',
-                    experience: 3,
+                    name: 'phpMyAdmin', experience: 2,
                 },
                 {
-                    name: 'Git',
-                    experience: 3,
+                    name: 'Webmin/Virtualmin', experience: 2,
                 },
                 {
-                    name: 'AJAX',
-                    experience: 1,
+                    name: 'HeidiSQL', experience: 2,
                 },
                 {
-                    name: 'React',
-                    experience: 1,
-                },
-                {
-                    name: 'Wordpress',
-                    experience: 5,
-                },
-                {
-                    name: 'Elementor',
-                    experience: 5,
-                },
-                {
-                    name: 'JSON',
-                    experience: 5,
-                },
-                {
-                    name: 'APIs',
-                    experience: 2,
-                },
-                {
-                    name: 'WPO',
-                    experience: 2,
-                },
-                {
-                    name: 'Webflow',
-                    experience: 2,
+                    name: 'CLI', experience: 2,
                 },
             ]
         },
         {
-            section: 'Back-end',
-            items: [
+            section: 'Design', items: [
                 {
-                    name: 'PHP (basics)',
-                    experience: 2,
+                    name: 'Illustrator (Ai)', experience: 5,
                 },
                 {
-                    name: 'Postman',
-                    experience: 2,
+                    name: 'Figma', experience: 4,
                 },
                 {
-                    name: 'mySQL',
-                    experience: 2,
+                    name: 'Photoshop (Ps)', experience: 10,
                 },
                 {
-                    name: 'phpMyAdmin',
-                    experience: 2,
+                    name: 'UX/UI', experience: 5,
                 },
                 {
-                    name: 'Webmin/Virtualmin',
-                    experience: 2,
+                    name: 'inDesign (Id)', experience: 3,
                 },
                 {
-                    name: 'HeidiSQL',
-                    experience: 2,
+                    name: 'Google material', experience: 4,
                 },
                 {
-                    name: 'CLI',
-                    experience: 2,
-                },
-            ]
-        },
-        {
-            section: 'Design',
-            items: [
-                {
-                    name: 'Illustrator (Ai)',
-                    experience: 5,
+                    name: 'Tilda', experience: 3,
                 },
                 {
-                    name: 'Figma',
-                    experience: 4,
+                    name: 'Responsive design', experience: 5,
                 },
                 {
-                    name: 'Photoshop (Ps)',
-                    experience: 10,
+                    name: 'WIX', experience: 2,
                 },
                 {
-                    name: 'UX/UI',
-                    experience: 5,
+                    name: 'Tilda', experience: 2,
                 },
                 {
-                    name: 'inDesign (Id)',
-                    experience: 3,
-                },
-                {
-                    name: 'Google material',
-                    experience: 4,
-                },
-                {
-                    name: 'Tilda',
-                    experience: 3,
-                },
-                {
-                    name: 'Responsive design',
-                    experience: 5,
-                },
-                {
-                    name: 'WIX',
-                    experience: 2,
-                },
-                {
-                    name: 'Tilda',
-                    experience: 2,
-                },
-                {
-                    name: 'Prototyping',
-                    experience: 5,
+                    name: 'Prototyping', experience: 5,
                 },
             ]
         },
         {
-            section: 'Management',
-            items: [
+            section: 'Management', items: [
                 {
-                    name: 'Agile',
-                    experience: 2,
+                    name: 'Agile', experience: 2,
                 },
                 {
-                    name: 'Team management',
-                    experience: 2,
+                    name: 'Team management', experience: 2,
                 },
                 {
-                    name: 'Planning',
-                    experience: 2,
+                    name: 'Planning', experience: 2,
                 },
                 {
-                    name: 'Risk management',
-                    experience: 8,
+                    name: 'Risk management', experience: 8,
                 },
                 {
-                    name: 'SDLC',
-                    experience: 5,
+                    name: 'SDLC', experience: 5,
                 },
                 {
-                    name: 'Project planing',
-                    experience: 3,
+                    name: 'Project planing', experience: 3,
                 },
                 {
-                    name: 'Problem solving',
-                    experience: 8,
+                    name: 'Problem solving', experience: 8,
                 },
                 {
-                    name: 'Negotiation',
-                    experience: 8,
+                    name: 'Negotiation', experience: 8,
                 },
                 {
-                    name: 'Technical writing',
-                    experience: 8,
+                    name: 'Technical writing', experience: 8,
                 },
                 {
-                    name: 'Conflict management',
-                    experience: 8,
+                    name: 'Conflict management', experience: 8,
                 },
                 {
-                    name: 'Budgeting',
-                    experience: 8,
+                    name: 'Budgeting', experience: 8,
                 },
             ]
         },
         {
-            section: 'Other',
-            items: [
+            section: 'Other', items: [
                 {
-                    name: 'Property evaluation',
-                    experience: 10,
+                    name: 'Property evaluation', experience: 10,
                 },
                 {
-                    name: 'Research skills',
-                    experience: 10,
+                    name: 'Research skills', experience: 10,
                 },
                 {
-                    name: 'System administration',
-                    experience: 2,
+                    name: 'System administration', experience: 2,
                 },
                 {
-                    name: 'Hardware management',
-                    experience: 2,
+                    name: 'Hardware management', experience: 2,
                 },
                 {
-                    name: 'Miro',
-                    experience: 2,
+                    name: 'Miro', experience: 2,
                 },
                 {
-                    name: 'Trello',
-                    experience: 3,
+                    name: 'Trello', experience: 3,
                 },
                 {
-                    name: 'Asana',
-                    experience: 3,
+                    name: 'Asana', experience: 3,
                 },
                 {
-                    name: 'SEO',
-                    experience: 2,
+                    name: 'SEO', experience: 2,
                 },
             ]
         },
         {
-            section: 'Soft skills',
-            items: [
+            section: 'Soft skills', items: [
                 {
-                    name: 'Self-Study',
-                    experience: 10,
+                    name: 'Self-Study', experience: 10,
                 },
                 {
-                    name: 'Creativity',
-                    experience: 10,
+                    name: 'Creativity', experience: 10,
                 },
                 {
-                    name: 'Adaptability',
-                    experience: 10,
+                    name: 'Adaptability', experience: 10,
                 },
                 {
-                    name: 'Teamwork',
-                    experience: 10,
+                    name: 'Teamwork', experience: 10,
                 },
                 {
-                    name: 'Leadership',
-                    experience: 10,
+                    name: 'Leadership', experience: 10,
                 },
             ]
         },
     ],
+    interests: ['DIY', 'design trends', 'management', 'programming', 'robots', 'data analysis'],
     education: {
-        basic: [
-            {
-                name: `Mykhailo Tuhan-Baranovskyi Donetsk National University of Economics and Trade`,
-                specialization: `Accounting and Auditing`,
-                qualification: `Accounting and Auditing professional`,
-                startDate: 2006,
-                endDate: 2009,
-            },
-            {
-                name: `Donetsk Polytechnic College`,
-                specialization: `Finance and credit`,
-                qualification: `Junior Specialist`,
-                startDate: 2003,
-                endDate: 2006,
-            },
-        ],
-        additional: [
-            {
-                name: `Accredited Property Appraiser`,
-                certification: 'State Property Fund of Ukraine, Ukrainian Society of Appraisers',
-                startDate: 2012,
-                endDate: 2012,
-            },
-            {
-                name: `Arbitration Manager (property manager, managing of readjustment, liquidation).`,
-                certification: 'Ministry of Justice of Ukraine (2017)',
-                startDate: 2014,
-                endDate: 2017,
-            },
-        ],
+        basic: [{
+            name: `Mykhailo Tuhan-Baranovskyi Donetsk National University of Economics and Trade`,
+            specialization: `Accounting and Auditing`,
+            qualification: `Accounting and Auditing professional`,
+            startDate: 2006,
+            endDate: 2009,
+        }, {
+            name: `Donetsk Polytechnic College`,
+            specialization: `Finance and credit`,
+            qualification: `Junior Specialist`,
+            startDate: 2003,
+            endDate: 2006,
+        },], additional: [{
+            name: `Accredited Property Appraiser`,
+            certification: 'State Property Fund of Ukraine, Ukrainian Society of Appraisers',
+            startDate: 2012,
+            endDate: 2012,
+        }, {
+            name: `Arbitration Manager (property manager, managing of readjustment, liquidation).`,
+            certification: 'Ministry of Justice of Ukraine (2017)',
+            startDate: 2014,
+            endDate: 2017,
+        },],
     },
-    interests: [
-        'DIY',
-        'design trends',
-        'management',
-        'programming',
-        'robots',
-        'data analysis'
-    ],
-    messengers: [
-        {
-            href: 'https://t.me/Artem_Skachko',
-            iconClass: 'fab fa-telegram',
-        },
-        {
-            href: `viber://chat?number=%2B+380991153048`,
-            iconClass: 'fab fa-viber',
-        },
-        {
-            href: `https://wa.me/+380991153048`,
-            iconClass: 'fab fa-whatsapp',
-        },
-    ],
     experience: [
         {
             startDate: 2003,
@@ -405,13 +304,13 @@ const person = {
             endDate: 2025,
             companyName: `'Remote Helpers'`,
             position: `Fullstack Designer => Frontend developer => Project manager`,
-            description: `Development of strategies, planning, personnel management,
-             management of internal and external projects. Analysis of candidates,
-             conducting interviews, mentorship, accompanying employees on overseas projects,
-             resolving disputes and conflicts both within the company and on projects involving company employees. 
-             Consulting company clients on technical solutions and technologies, selecting necessary specialists,
-             forming project teams. Practical activities in the field of design,
-             front-end development, and development of comprehensive solutions.`,
+            description: `I have been working at Remote Helpers, an outsourcing company, for the past 5 years, where I started as a Designer. As a Designer, I worked on various design fields, including web design, application design, advertising design, printing, and brand identity development. My efficiency and competence in working on multiple international projects led to my promotion to a Team Lead position after a short period of time.
+
+During my time as a Team Lead, I took the initiative to improve the internal and external processes of the design department. I implemented a comprehensive system for selecting, training, and subsequently sending out qualified employees to work on international projects. Over the course of six months, with the help of my assistant, I successfully managed to interview, train and send out over 60 designers in various design fields.
+
+During this period, I became interested in web development, acquiring the necessary knowledge to automate processes within the design department. I then took on several international projects as a Front-End Developer, and due to my value as a versatile employee, I was soon promoted to head the Design and Development department. After another six months in this role, my potential was recognized, and I was appointed Project Manager.
+
+As a Project Manager, I was responsible for developing strategies, planning, personnel management, and managing internal and external projects. My duties included analyzing candidates, conducting interviews, providing mentorship, accompanying employees on overseas projects, resolving disputes and conflicts within the company, and on projects involving company employees. Additionally, I consulted with company clients on technical solutions and technologies, selecting the necessary specialists, and forming project teams. My practical activities in design, front-end development, and comprehensive solution development have allowed me to excel in my current role.`,
         },
         {
             startDate: 2017,
@@ -438,42 +337,10 @@ const person = {
             description: `Practical activities in the field of independent appraisal of the value of property and property rights.
             Working with government agencies on the assessment of the value and sale of property that is in tax lien, as well as in judicial rehabilitation and liquidation procedures`,
         },
-    ],
-    competitions: ['designer', 'front-end engineer', 'project manager'],
-    about: [
-        `I am a manager and engineer by profession. However, let me shed some light on the details.<br>`,
-        `Born into a family of engineers, I have always had a fascination with taking things apart and seeing how they work.`,
-        `With time and education, I gained the knowledge and wisdom to identify flaws in things and processes, and to improve and create something new.<br>`,
-        `After exploring and studying various fields, I have developed the ability to solve a vast number of problems and tasks, making me an engineer.`,
-        `Currently, I engage in activities such as researching, planning, designing, constructing, developing, documenting, producing, commissioning`,
-        `testing, repairing, disposing, and quality management. It doesn't matter to me what the field is, the scale of the project or how complex it is.<br>`,
-        `My current area of interest is IT, and I believe it will continue to be interesting as long as AI doesn't take over the world.<br>`,
-        `<b>Glory to Ukraine!</b>`
-    ],
-
-    drawHeader: function () {
-
-        const name = `
-            ${this.general.firstName ? this.general.firstName : 'John'} 
-            ${this.general.lastName ? this.general.lastName : 'Doe'}`;
-        const competitions = this.competitions ? this.competitions.map(item => `<span>${item}</span>`) : 'please create competitions array';
-
-        const Header = `
-            <header>
-                    <h1>${name} <img src="assets/img/flag-ukraine.png" alt="im ukranian"></h1>
-                    <h2>${competitions.join('<hr>')}</h2>
-                    <div>
-                        <button id="contact-button">Contacts</button>
-                        <button id="print-button"><i class="fa-solid fa-print"></i></button>
-                    </div>
-                    
-            </header>`;
-
-        document.body.insertAdjacentHTML('beforeend', Header);
-    },
+    ], /**/
     drawBody: function () {
-        const randomizer = Math.floor(Math.random()*6);
-        const experience = this.experience.sort((a,b) => b.endDate < a.endDate ? -1: 1).map(item => `<div>
+        const randomizer = Math.floor(Math.random() * 6);
+        const experience = this.experience.sort((a, b) => b.endDate < a.endDate ? -1 : 1).map(item => `<div>
                             <h4>${item.companyName} <span>${item.startDate} - ${item.endDate < new Date().getFullYear() ? item.endDate : 'now'}</span></h4>
                             <h5><u>Position:</u> ${item.position}</h5>
                             <p>${item.description}</p>
@@ -482,11 +349,10 @@ const person = {
         const skills = this.skills.map(item => `
             <h5>${item.section}</h5>
             <div class="skills-row">
-                ${item.items.map(skill => 
-                    `<span>${skill.name}
+                ${item.items.map(skill => `<span>${skill.name}
                             <i>${skill.experience}y</i>
                         </span>`)
-                .join('')}
+            .join('')}
             </div>`)
         const interests = this.interests.map(item => `<span>${item}</span>`);
         const edu_additional = this.education.additional.map(item => `
@@ -557,7 +423,25 @@ const person = {
         </main>`;
         document.body.insertAdjacentHTML('beforeend', Layout);
     },
-    drawContacts: function (){
+    drawHeader: function () {
+        const name = `
+            ${this.general.firstName ? this.general.firstName : 'John'} 
+            ${this.general.lastName ? this.general.lastName : 'Doe'}`;
+        const competitions = this.competitions ? this.competitions.map(item => `<span>${item}</span>`) : 'please create competitions array';
+        const Header = `
+            <header>
+                    <h1>${name} <img src="assets/img/flag-ukraine.png" alt="im ukranian"></h1>
+                    <h2>${competitions.join('<hr>')}</h2>
+                    <div>
+                        <button id="contact-button">Contacts</button>
+                        <button id="print-button"><i class="fa-solid fa-print"></i></button>
+                    </div>
+                    
+            </header>`;
+
+        document.body.insertAdjacentHTML('beforeend', Header);
+    },
+    drawContacts: function () {
         const socials = this.contacts.messengers.map(item => `
                     <a href=${item.href} data-value=${item.nickname}>
                         <i class='${item.iconClass}'></i>
@@ -581,8 +465,8 @@ const person = {
                     <i class="fa-regular fa-circle-xmark"></i>
             </section>
         `)
-    },
-    modalHandler: function (){
+    }, /**/
+    modalHandler: function () {
         const contactSection = document.querySelector('.contacts')
 
         document.querySelector('header #contact-button').addEventListener('click', showModal);
@@ -590,7 +474,9 @@ const person = {
         function showModal() {
             const visibility = getComputedStyle(contactSection).display;
             visibility === 'none' ? contactSection.style.display = 'flex' : contactSection.style.display = 'none';
-            setTimeout(() => {contactSection.classList.toggle('visible')}, 200);
+            setTimeout(() => {
+                contactSection.classList.toggle('visible')
+            }, 200);
             document.body.style.overflow = 'hidden';
             contactSection.addEventListener('click', hideModal)
 
@@ -601,11 +487,9 @@ const person = {
             const visibility = getComputedStyle(contactSection).display;
             const closeBtn = contactSection.querySelector('.fa-circle-xmark')
 
-            if (e.target === contactSection || e.target === closeBtn){
+            if (e.target === contactSection || e.target === closeBtn) {
                 contactSection.classList.toggle('visible');
-                setTimeout(()=> visibility === 'none'
-                    ? contactSection.style.display = 'flex'
-                    : contactSection.style.display = 'none' ,200);
+                setTimeout(() => visibility === 'none' ? contactSection.style.display = 'flex' : contactSection.style.display = 'none', 200);
                 document.body.style.overflow = 'unset';
                 contactSection.removeEventListener('click', hideModal);
             }
@@ -613,7 +497,7 @@ const person = {
 
 
     },
-    printActions: function (){
+    printActions: function () {
         const contactGroup = `
         <article class="print-contacts">
             <section class="print-g-contacts">
@@ -630,25 +514,18 @@ const person = {
         </article>
         `;
 
-
         document.querySelector('header #print-button').addEventListener('click', letsPrint);
-        function letsPrint(){
-            window.onbeforeprint = (e) => {
-                document.querySelector('.print-contacts') === null
-                ?
-                document.querySelector('#main').insertAdjacentHTML('afterbegin', contactGroup)
-                :
-                '';
+
+        function letsPrint() {
+            window.onbeforeprint = () => {
+                document.querySelector('.print-contacts') === null ? document.querySelector('#main').insertAdjacentHTML('afterbegin', contactGroup) : '';
             }
             window.print();
-
-            window.onafterprint = (e) => {
+            window.onafterprint = () => {
                 document.querySelector('.print-contacts').remove()
             }
         }
-    },
-
-
+    }, /**/
     Render: function () {
         this.drawHeader();
         this.drawBody();
@@ -659,4 +536,3 @@ const person = {
 }
 
 person.Render()
-
